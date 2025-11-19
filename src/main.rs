@@ -1,6 +1,6 @@
 fn main() {
     println!(
-        "Which Temperature Conversion would you like to do? /n1:Celsius to Fahrenheit /n2:Fahrenheit to Celsius /n3:Celsius to Kelvin /n4:Kelvin to Celsius"
+        "Which Temperature Conversion would you like to do? \n 1:Celsius to Fahrenheit \n 2:Fahrenheit to Celsius \n 3:Celsius to Kelvin \n 4:Kelvin to Celsius"
     );
     let mut conversion_question: String = String::new();
     std::io::stdin()
