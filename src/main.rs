@@ -1,4 +1,8 @@
 fn main() {
+   conversion_question_tree()
+}
+
+fn conversion_question_tree() {
     println!(
         "Which Temperature Conversion would you like to do? \n 1:Celsius to Fahrenheit \n 2:Fahrenheit to Celsius \n 3:Celsius to Kelvin \n 4:Kelvin to Celsius"
     );
@@ -32,14 +36,14 @@ fn main() {
         let mut celsius2_temp = String::new();
         std::io::stdin().read_line(&mut celsius2_temp).unwrap();
         let celsius2_temp: f64 = celsius2_temp.trim().parse().unwrap();
-        let celsius_to_kelvin_conversion = (celsius2_temp + 273.15);
+        let celsius_to_kelvin_conversion = celsius2_temp + 273.15;
         println!("Temperature in Kelvin: {}K", celsius_to_kelvin_conversion);
     } else if conversion_question == 4 {
         println!("What is the Temperature in Kelvin?");
         let mut kelvin_temp = String::new();
         std::io::stdin().read_line(&mut kelvin_temp).unwrap();
         let kelvin_temp: f64 = kelvin_temp.trim().parse().unwrap();
-        let kelvin_to_celsius_conversion = (kelvin_temp - 273.15);
+        let kelvin_to_celsius_conversion = kelvin_temp - 273.15;
         println!("Temperature in Celsius: {}°C", kelvin_to_celsius_conversion);
     }
 }
